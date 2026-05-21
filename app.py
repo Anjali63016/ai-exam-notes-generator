@@ -23,7 +23,9 @@ load_dotenv()
 os.getenv("GOOGLE_API_KEY")
 load_dotenv()
 
-genai.configure(api_key="AIzaSyB72B4ukFX67QVPjK6fbZpFv8uSKZixnpw")
+genai.configure(
+    api_key=st.secrets["GEMINI_API_KEY"]
+)
 
 # Download tokenizer
 nltk.download('punkt')
